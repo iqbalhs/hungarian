@@ -4,14 +4,14 @@ namespace iqbalhs\hungarian;
 
 final class Hungarian 
 {
-	public $matrix = [];
+    public $matrix = [];
 
     protected $reduced = [];
 
-	function __construct(array $matrix) {
+    function __construct(array $matrix) {
         $this->validate($matrix);
-		$this->reduced = $this->matrix = $matrix;
-	}
+        $this->reduced = $this->matrix = $matrix;
+    }
 
     protected function validate(array $matrix)
     {
@@ -43,12 +43,12 @@ final class Hungarian
         return $this->reduced;
     }
 
-	public function print()
-	{
-		foreach ($this->matrix as $data) {
+    public function print()
+    {
+        foreach ($this->matrix as $data) {
             print(implode(' ,', $data) . "\n");
         }
-	}
+    }
 
     public function solve()
     {
